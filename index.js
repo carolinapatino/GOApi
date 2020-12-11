@@ -5,7 +5,7 @@ const OportunidadesXProducto = require('./OportunidadesXProducto')
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send("Hello World");
+    res.send("Hello World, si funciona");
    });
 
 app.post('/XProducto', (req, res) => {
