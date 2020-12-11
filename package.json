@@ -1,0 +1,25 @@
+{
+  "name": "goapi",
+  "version": "1.0.0",
+  "description": "Api para exportar a excel informes del gestor de Oportunidades",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "excel4node": "^1.7.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carolinapatino/GOApi.git"
+  },
+  "author": "Carolina Patiño",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carolinapatino/GOApi/issues"
+  },
+  "homepage": "https://github.com/carolinapatino/GOApi#readme"
+}
