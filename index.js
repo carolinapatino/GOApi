@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const OportunidadesXProducto = require('./OportunidadesXProducto');
-const downloadsFolder = require('downloads-folder');
 
 app.use(express.json());
 
@@ -10,9 +9,8 @@ app.get('/', (req, res) => {
    });
 
 app.post('/XProducto', (req, res) => {
-OportunidadesXProducto.createStructure(req.body)
-var path=downloadsFolder();
-res.json(path);
+//res.download(OportunidadesXProducto.createStructure(req.body))
+res.download('C:\\Users\\carop\\Downloads\\ReporteOportunidades-2020-12-13T15-09-16.xlsx')
 });
 
 app.listen(process.env.PORT || 3000);

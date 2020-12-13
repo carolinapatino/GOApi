@@ -26,7 +26,10 @@ function createExcel(headers, data, name) {
     var today = new Date().toISOString().slice(0, 19);
     today = today.replace(/:/g,"-");
     var path=downloadsFolder();
-    wb.write(`${path}\\ReporteOportunidades-${today}.xlsx`);
+    var name = `${path}\\ReporteOportunidades-${today}.xlsx`;
+    wb.write(name);
+    return name;
+    
 }
 
 exports.createExcel = createExcel;

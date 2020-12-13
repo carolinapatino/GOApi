@@ -14,7 +14,6 @@ function createStructure(data) {
         delete data[i]['idUsuarioCerrador'];
         data[i]['OportunidadId']=data[i]['OportunidadId'].toString()
     }
-    console.log(data)
     const headingColumnNames = [
         "ID",
         "Fecha",
@@ -26,7 +25,7 @@ function createStructure(data) {
     var data = data;
 
     var filename = today+'InformeOportunidadesDeVenta.xlsx';
-    excel.createExcel(headingColumnNames, data,filename);
+    return excel.createExcel(headingColumnNames, data,filename);
 }
 
 
