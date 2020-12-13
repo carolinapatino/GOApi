@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const OportunidadesXProducto = require('./OportunidadesXProducto')
+const OportunidadesXProducto = require('./OportunidadesXProducto');
+const downloadsFolder = require('downloads-folder');
 
 app.use(express.json());
 
@@ -10,7 +11,8 @@ app.get('/', (req, res) => {
 
 app.post('/XProducto', (req, res) => {
 OportunidadesXProducto.createStructure(req.body)
-res.json(req.body);
+var path=downloadsFolder();
+res.json(path);
 });
 
 app.listen(process.env.PORT || 3000);
