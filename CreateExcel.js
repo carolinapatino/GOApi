@@ -2,7 +2,10 @@ const xl = require('excel4node');
 const wb = new xl.Workbook();
 const ws = wb.addWorksheet('Oportunidades de Venta');
 const downloadsFolder = require('downloads-folder');
+const save = require('save-file');
+ 
 
+ 
 
 function createExcel(headers, data, name) {
  
@@ -27,8 +30,8 @@ function createExcel(headers, data, name) {
     today = today.replace(/:/g,"-");
     var path=downloadsFolder();
     var name = `${path}\\ReporteOportunidades-${today}.xlsx`;
-    wb.write(name);
-    return name;
+    return wb.write(name);
+    
     
 }
 
