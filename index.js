@@ -2,15 +2,21 @@ const express = require('express');
 const app = express();
 const OportunidadesXProducto = require('./OportunidadesXProducto');
 
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send("Hello World, si funciona");
+    res.send("Hello World");
    });
 
 app.post('/XProducto', (req, res) => {
-//res.download(OportunidadesXProducto.createStructure(req.body))
-res.download('C:\\Users\\carop\\Downloads\\ReporteOportunidades-2020-12-13T15-09-16.xlsx')
+var path = OportunidadesXProducto.createStructure(req.body);
+//var filename = path.replace(/\\/g,'\\\\');
+//console.log(filename)
+var prueba='C:\\Users\\carop\\Downloads\\ReporteOportunidades-2020-12-14T01-31-45.xlsx';
+var prueba2 = __dirname 
+res.download(prueba)
+res.send(__dirname)
 });
 
 app.listen(process.env.PORT || 3000);
