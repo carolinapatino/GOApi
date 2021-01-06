@@ -2,10 +2,6 @@ const xl = require('excel4node');
 const wb = new xl.Workbook();
 const ws = wb.addWorksheet('Oportunidades de Venta');
 const downloadsFolder = require('downloads-folder');
-const save = require('save-file');
- 
-
- 
 
 function createExcel(headers, data, name) {
  
@@ -52,9 +48,6 @@ function createExcel(headers, data, name) {
         });
         rowIndex++;
     });
-
-
-   
 
     var today = new Date().toISOString().slice(0, 19);
     today = today.replace(/:/g,"-");

@@ -25,6 +25,4 @@ function createStructure(data) {
     return excel.createExcel(headingColumnNames, data,filename);
 }
 
-
-
 exports.createStructure = createStructure;
